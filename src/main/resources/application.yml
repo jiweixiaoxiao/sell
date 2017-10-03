@@ -8,6 +8,10 @@ spring:
     show-sql: true
 server:
   context-path: /sell
-logging:
-  pattern:
-    console: "%d - %msg%n"
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#  path: E:\programData\workSpace\log
+#  file: E:\programData\workSpace\log\sell.log
+#  level: debug
+
