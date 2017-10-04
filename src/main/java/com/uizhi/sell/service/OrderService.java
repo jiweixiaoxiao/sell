@@ -15,7 +15,7 @@ import java.util.List;
  */
 public interface OrderService {
     //创建订单
-    OrderDto create(OrderMaster orderMaster);
+    OrderDto create(OrderDto orderDto);
 
     //查询订单
     OrderDto findOne(String orderId);
