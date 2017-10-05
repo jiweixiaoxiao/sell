@@ -2,8 +2,9 @@ package com.uizhi.sell.service;
 
 import com.uizhi.sell.dataObject.OrderMaster;
 import com.uizhi.sell.dto.OrderDto;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
-import java.awt.print.Pageable;
 import java.util.List;
 
 /**
@@ -21,10 +22,10 @@ public interface OrderService {
     OrderDto findOne(String orderId);
 
     //查询订单列表
-    List<OrderDto> findList(String buyerOpenid, Pageable pageable);
+    Page<OrderDto> findList(String buyerOpenid, Pageable pageable);
 
     //取消订单
-    OrderDto chancel(OrderDto orderDto);
+    OrderDto chancel(String openId,String orderId);
 
     //完结订单
     OrderDto finish(OrderDto orderDto);

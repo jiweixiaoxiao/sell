@@ -1,6 +1,7 @@
 package com.uizhi.sell.repository;
 
 import com.uizhi.sell.dataObject.OrderMaster;
+import org.aspectj.weaver.ast.Or;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,4 +15,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface OrderMasterRepository extends JpaRepository<OrderMaster,String>{
     Page<OrderMaster> findByBuyerOpenid(String buyer, Pageable pageable);
+    Page<OrderMaster> findByBuyerOpenidAndOrderId(String buyerOpenId,String orderId,Pageable pageable);
 }

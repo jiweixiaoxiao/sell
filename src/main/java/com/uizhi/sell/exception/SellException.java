@@ -1,5 +1,7 @@
 package com.uizhi.sell.exception;
 
+import com.uizhi.sell.enums.ResultEnum;
+
 /**
  * DESCRIPTION :
  *
@@ -8,5 +10,15 @@ package com.uizhi.sell.exception;
  * @email charles_ji@icloud.com
  */
 public class SellException extends RuntimeException{
+private Integer code;
 
+    public SellException(ResultEnum resultEnum) {
+        super(resultEnum.getMessage());
+        this.code = resultEnum.getCode();
+    }
+
+    public SellException(Integer code,String message) {
+        super(message);
+        this.code = code;
+    }
 }

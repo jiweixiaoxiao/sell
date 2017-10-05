@@ -15,5 +15,5 @@ import java.util.List;
 public class ResultVo<T> {
     private Integer code;
     private  String msg;
-    private List<T> data;
+    private Object data;
 }

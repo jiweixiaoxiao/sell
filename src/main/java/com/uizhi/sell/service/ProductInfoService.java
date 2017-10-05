@@ -1,6 +1,7 @@
 package com.uizhi.sell.service;
 
 import com.uizhi.sell.dataObject.ProductInfo;
+import com.uizhi.sell.dto.CartDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -15,6 +16,10 @@ public interface ProductInfoService {
     public List<ProductInfo> findUpAll(Integer productStatus);
     //保存一个商品
     public ProductInfo save(ProductInfo productInfo);
+    //加库存
+    void increaseStock(List<CartDto> cartDtoList);
+    //减库存
+    void decreaseStock(List<CartDto> cartDtos);
 
 
 
